@@ -1,0 +1,729 @@
+/* Features */
+
+/* Badge */
+
+.badges-container {
+	position: relative;
+}
+
+.badge {
+	position: absolute;
+	left: 120%;
+}
+
+.badge::before {
+	position: relative;
+	left: -100%;
+	margin-right: 10px;
+	display: block;
+	height: 1px;
+	content: '';
+	background-color: #CCC;
+}
+
+.badge-item {
+	margin-top: -0.75em;
+	width: 200px;
+	font-weight: 300;
+	color: #999;
+}
+
+
+
+/* Sections */
+
+/* Section hero */
+
+#section-hero > .section-content {
+	padding-top: 240px;
+}
+
+#section-hero h1 {
+	margin-bottom: 2px;
+	font-size: 5em;
+	font-weight: 100;
+}
+
+#section-hero h2 {
+	font-size: 2em;
+}
+
+#image-hero {
+	margin-top: -346px;
+	margin-left: -120px;
+	width: 821px;
+	height: 1004px;
+	background: url(/images/inventor/1.0/images/hero/hero-large.png) no-repeat;
+}
+
+@media only screen and (max-width: 979px) {
+	#section-hero > .section-content {
+		padding-top: 20px !important;
+		padding-bottom: 512px;
+	}
+
+	#image-hero {
+		bottom: 120px;
+		width: 320px;
+		height: 392px;
+		background-image: url(/images/inventor/1.0/images/hero/hero-small@2x.png);
+		background-size: 320px 392px;
+	}
+}
+
+	/* Intro */
+	
+	.js #section-hero h1, .js #section-hero h2 {
+		opacity: 0;
+		transform: translate3d(0, 20px, 0);
+	}
+	
+	.js #image-hero {
+		opacity: 0;
+		transform: translate3d(20px, 0, 0);
+	}
+	
+	.js.intro-started #section-hero h1 {
+		transition-delay: 0.85s;
+	}
+	
+	.js.intro-started #section-hero h2 {
+		transition-delay: 0.75s;
+	}
+	
+	.js.intro-started #section-hero h1, .js.intro-started #section-hero h2 {
+		transition-duration: 1s;
+	}
+	
+	.js.intro-started #image-hero {
+		transition-duration: 1.25s;
+	}
+	
+	.js.intro-started #section-hero h1, .js.intro-started #section-hero h2, .js.intro-started #image-hero {
+		transition-property: opacity, transform;
+		transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95), cubic-bezier(0.39, 0.575, 0.565, 1);
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+
+/* Section masterpiece */
+
+#section-masterpiece {
+	height: 400px;
+	background: url(/images/inventor/1.0/images/masterpiece/masterpiece-large.png) 50% 50% no-repeat #F5F5F5;
+}
+
+@media only screen and (max-width: 979px) {
+	#section-masterpiece {
+		height: 150px;
+		background-image: url(/images/inventor/1.0/images/masterpiece/masterpiece-small@2x.png);
+		background-size: 320px 210px;
+	}
+}
+
+/* Section intro */
+
+#intro {
+	margin: auto;
+	width: 89%;
+	text-align: center;
+	font-size: 1.75em;
+	font-weight: 100;
+}
+
+@media only screen and (max-width: 979px) {
+	#intro {
+		max-width: 450px;
+		font-size: 1.25em;
+	}
+}
+
+/* Section overview */
+
+#image-ycarriage {
+	float: right;
+	margin-right: 42px;
+	width: 968px;
+	height: 400px;
+	background: url(/images/inventor/1.0/images/overview/ycarriage-large.png) no-repeat;
+}
+
+#image-frame {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 408px;
+	height: 330px;
+	background: url(/images/inventor/1.0/images/overview/frame-large.png) no-repeat;
+}
+
+@media only screen and (max-width: 979px) {
+	#image-ycarriage {
+		width: 434px;
+		height: 200px;
+		background-size: 434px 200px;
+	}
+	
+	#image-frame {
+		width: 204px;
+		height: 165px;
+		background-size: 204px 165px;
+	}
+}
+
+/* Section design */
+
+#section-majestic {
+	margin-top: 10px;
+}
+
+#image-top {
+	position: relative;
+	top: 50px;
+	right: -20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 578px;
+	height: 300px;
+	background: url(/images/inventor/1.0/images/overview/top-large.png) no-repeat;
+}
+
+@media only screen and (max-width: 979px) {
+	#image-top {
+		top: 25px;
+		right: -10px;
+		width: 289px;
+		height: 150px;
+		background-size: 289px 150px;
+	}
+}
+
+/* Section printvolume */
+
+#column-printvolume {
+	padding-top: 145px;
+}
+
+.printvolume-wrapper {
+	position: relative;
+	float: right;
+	perspective: 1700px;
+}
+
+.printvolume-wrapper, #image-printvolume {
+	width: 526px;
+	height: 897px;
+}
+
+#image-printvolume {
+	background: url(/images/inventor/1.0/images/printvolume/printvolume-large.png) no-repeat;
+}
+
+#section-printvolume .callout {
+	margin: 20px auto 0;
+	width: 7.5em;
+	height: 66px;
+}
+
+.js #section-printvolume.fade-in .callout-headline, .js #section-printvolume.fade-in .callout-description {
+	opacity: 0;
+}
+
+.js #section-printvolume.fade-in .callout-headline {
+	transform: translate3d(0, 5px, 0);
+}
+
+.js #section-printvolume.fade-in .callout-description {
+	transform: translate3d(0, -5px, 0);
+}
+
+.js #section-printvolume.fade-in.animated .callout-headline, .js #section-printvolume.fade-in.animated .callout-description {
+	transition: transform 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95) 2.2s, opacity 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 2.2s;
+	transform: translate3d(0, 0, 0);
+	opacity: 1;
+}
+
+	/* Cuboid */
+
+	#cuboid {
+		position: absolute;
+		transform-style: preserve-3d;
+		transform: translate3d(133px, 64px, -161px);
+	}
+
+	.cuboid-face {
+		position: absolute;
+		width: 258px;
+		border: 1px solid #888;
+		background: url(/images/inventor/1.0/images/printvolume/pattern.png) rgba(0, 0, 0, 0.4);
+		opacity: 1;
+	}
+
+	#cuboid-face-top, #cuboid-face-bottom {
+		height: 258px;
+	}
+
+	#cuboid-face-front, #cuboid-face-back, #cuboid-face-right, #cuboid-face-left {
+		height: 378px;
+	}
+
+	#cuboid-face-bottom {
+		transform: rotateX(-90deg) translate3d(0, 0, 335px);
+	}
+
+	.js .fade-in #cuboid-face-top {
+		transform: rotateX(90deg) translate3d(0, 0, -335px);
+	}
+
+	.js .fade-in #cuboid-face-front {
+		transform: rotateY(0) translate3d(0, 275px, 130px) scale(1, 0);
+	}
+
+	.js .fade-in #cuboid-face-back {
+		transform: rotateY(180deg) translate3d(0, 275px, 130px) scale(1, 0);
+	}
+
+	.js .fade-in #cuboid-face-right {
+		transform: rotateY(90deg) translate3d(0, 275px, 130px) scale(1, 0);
+	}
+
+	.js .fade-in #cuboid-face-left {
+		transform: rotateY(270deg) translate3d(0, 275px, 130px) scale(1, 0);
+	}
+
+	#cuboid-face-top, .js .fade-in.animated #cuboid-face-top {
+		transform: rotateX(90deg) translate3d(0, 0, 45px);
+	}
+
+	#cuboid-face-front, .js .fade-in.animated #cuboid-face-front {
+		transform: rotateY(0) translate3d(0, 85px, 130px) scale(1, 1);
+	}
+
+	#cuboid-face-back, .js .fade-in.animated #cuboid-face-back {
+		transform: rotateY(180deg) translate3d(0, 85px, 130px) scale(1, 1);
+	}
+
+	#cuboid-face-right, .js .fade-in.animated #cuboid-face-right {
+		transform: rotateY(90deg) translate3d(0, 85px, 130px) scale(1, 1);
+	}
+
+	#cuboid-face-left, .js .fade-in.animated #cuboid-face-left {
+		transform: rotateY(270deg) translate3d(0, 85px, 130px) scale(1, 1);
+	}
+
+@media only screen and (max-width: 979px) {
+	#section-printvolume > .section-content {
+		padding-top: 120px;
+		padding-bottom: 569px;
+	}
+
+	#column-printvolume {
+		padding-top: 0;
+	}
+
+	.printvolume-wrapper {
+		top: 30px;
+	}
+
+	.printvolume-wrapper, #image-printvolume {
+		width: 263px;
+		height: 449px;
+	}
+
+	#image-printvolume {
+		background-size: 263px 449px;
+	}
+
+		/* Cuboid */
+
+		#cuboid {
+			transform: translate3d(67px, -9px, -144px);
+		}
+
+		.cuboid-face {
+			width: 128px;
+		}
+
+		#cuboid-face-top, #cuboid-face-bottom {
+			height: 128px;
+		}
+
+		#cuboid-face-front, #cuboid-face-back, #cuboid-face-right, #cuboid-face-left {
+			height: 188px;
+		}
+		
+		#cuboid-face-bottom {
+			transform: rotateX(-90deg) translate3d(0, 0, 210px);
+		}
+
+		.js .fade-in #cuboid-face-top {
+			transform: rotateX(90deg) translate3d(0, 0, -210px);
+		}
+
+		.js .fade-in #cuboid-face-front {
+			transform: rotateY(0) translate3d(0, 180px, 65px) scale(1, 0);
+		}
+
+		.js .fade-in #cuboid-face-back {
+			transform: rotateY(180deg) translate3d(0, 180px, 65px) scale(1, 0);
+		}
+
+		.js .fade-in #cuboid-face-right {
+			transform: rotateY(90deg) translate3d(0, 180px, 65px) scale(1, 0);
+		}
+
+		.js .fade-in #cuboid-face-left {
+			transform: rotateY(270deg) translate3d(0, 180px, 65px) scale(1, 0);
+		}
+
+		#cuboid-face-top, .js .fade-in.animated #cuboid-face-top {
+			transform: rotateX(90deg) translate3d(0, 0, -20px);
+		}
+
+		#cuboid-face-front, .js .fade-in.animated #cuboid-face-front {
+			transform: rotateY(0) translate3d(0, 85px, 65px) scale(1, 1);
+		}
+
+		#cuboid-face-back, .js .fade-in.animated #cuboid-face-back {
+			transform: rotateY(180deg) translate3d(0, 85px, 65px) scale(1, 1);
+		}
+
+		#cuboid-face-right, .js .fade-in.animated #cuboid-face-right {
+			transform: rotateY(90deg) translate3d(0, 85px, 65px) scale(1, 1);
+		}
+
+		#cuboid-face-left, .js .fade-in.animated #cuboid-face-left {
+			transform: rotateY(270deg) translate3d(0, 85px, 65px) scale(1, 1);
+		}
+}
+
+.js .fade-in .cuboid-face {
+	opacity: 0;
+}
+
+.js .fade-in.animated .cuboid-face {
+	transition: opacity 1.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 1s, transform 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 1s;
+	opacity: 1;
+}
+
+/* Section accuracy */
+
+#section-accuracy {
+	background-color: #F5F5F5;
+}
+
+#column-accuracy {
+	padding-top: 15px;
+}
+
+#image-accuracy {
+	width: 320px;
+	height: 507px;
+	background: url(/images/inventor/1.0/images/accuracy/accuracy-large.png) no-repeat;
+}
+
+@media only screen and (max-width: 979px) {
+	#column-accuracy {
+		padding-top: 0;
+	}
+	
+	#section-accuracy > .section-content {
+		padding-bottom: 597px;
+	}
+
+	#image-accuracy {
+		top: 30px;
+	}
+}
+
+/* Section autoleveling */
+
+#column-autoleveling {
+	padding-top: 74px;
+}
+
+#image-autoleveling {
+	width: 363px;
+	height: 579px;
+	background: url(/images/inventor/1.0/images/autoleveling/autoleveling-large.png) no-repeat;
+}
+
+	/* Badges */
+
+	#badge-actuator {
+		top: 194px;
+	}
+
+	#badge-sensor {
+		top: 289px;
+	}
+
+	#badge-prober {
+		top: 376px;
+	}
+	
+	.js .fade-in #badge-actuator, .js .fade-in #badge-sensor, .js .fade-in #badge-prober {
+		width: 0;
+	}
+	
+	#badge-actuator, .js .fade-in.animated #badge-actuator {
+		width: 350px;
+	}
+	
+	#badge-sensor, .js .fade-in.animated #badge-sensor {
+		width: 239px;
+	}
+	
+	#badge-prober, .js .fade-in.animated #badge-prober {
+		width: 239px;
+	}
+
+	@media only screen and (max-width: 979px) {
+		#column-autoleveling {
+			padding-top: 0;
+			padding-bottom: 30px;
+		}
+	
+		#image-autoleveling {
+			width: 200px;
+			height: 319px;
+			background-image: url(/images/inventor/1.0/images/autoleveling/autoleveling-small@2x.png);
+			background-size: 200px 319px;
+		}
+		
+		#badge-actuator {
+			top: 108px;
+		}
+
+		#badge-sensor {
+			top: 159px;
+		}
+
+		#badge-prober {
+			top: 202px;
+		}
+
+		#badge-actuator, .js .fade-in.animated #badge-actuator {
+			width: 193px;
+		}
+
+		#badge-sensor, .js .fade-in.animated #badge-sensor {
+			width: 132px;
+		}
+
+		#badge-prober, .js .fade-in.animated #badge-prober {
+			width: 132px;
+		}
+	}
+
+	.js .fade-in .badge {
+		opacity: 0;
+	}
+	
+	.js .fade-in.animated .badge {
+		transition: opacity 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.6s, width 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.6s;
+		opacity: 1;
+	}
+
+/* Section display */
+
+#section-display {
+	background-image: linear-gradient(to bottom, #E2E2E2 70%, #FFF 100%);
+}
+
+#section-display > .section-content {
+	padding-top: 422px !important;
+	padding-bottom: 240px;
+}
+
+#image-display {
+	top: 0;
+	width: 1024px;
+	height: 387px;
+	background: url(/images/inventor/1.0/images/display/display-large.png) no-repeat;
+}
+
+@media only screen and (max-width: 979px) {
+	#section-display > .section-content {
+		padding-top: 229px !important;
+		padding-bottom: 120px;
+	}
+
+	#image-display {
+		width: 512px;
+		height: 194px;
+		background-size: 512px 194px;
+	}
+}
+
+/* Section controller */
+#section-controller > .section-content {
+	padding-top: 0 !important;
+	padding-bottom: 224px;
+}
+
+#column-controller {
+	padding-top: 107px;
+}
+
+#image-controller {
+	width: 676px;
+	height: 302px;
+	background: url(/images/inventor/1.0/images/controller/controller-large.png) no-repeat;
+}
+
+@media only screen and (max-width: 979px) {
+	#column-controller {
+		padding-top: 0;
+	}
+
+	#image-controller {
+		top: 30px;
+		width: 300px;
+		height: 134px;
+		background-image: url(/images/inventor/1.0/images/controller/controller-small@2x.png);
+		background-size: 300px 134px;
+	}
+}
+
+.js .fade-in #image-controller {
+	transform: translate3d(0, 10px, 0);
+	opacity: 0;
+}
+
+.js .fade-in.animated #image-controller {
+	transition: transform 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.6s, opacity 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.6s;
+	transform: translate3d(0, 0, 0);
+	opacity: 1;
+}
+
+/* Section cooling */
+
+#section-cooling {
+	background: url(/images/inventor/1.0/images/cooling/cartographer.png) #111;
+	color: #EEE;
+}
+
+#section-cooling > .section-content {
+	padding-top: 368px !important;
+}
+
+#cooling-wrapper {
+	top: 0;
+}
+
+#cooling-wrapper, #image-cooling {
+	width: 1260px;
+	height: 328px;
+}
+
+#image-cooling {
+	position: relative;
+	z-index: 2;
+	background: url(/images/inventor/1.0/images/cooling/cooling-large.png) no-repeat;
+}
+
+#cooling-wrapper::before, #cooling-wrapper::after {
+	position: absolute;
+	z-index: 1;
+	content: '';
+}
+
+#cooling-wrapper::before {
+	bottom: 108px;
+	right: 1142px;
+	width: 160px;
+	height: 160px;
+	background: radial-gradient(at 100% 50%, rgba(31, 93, 161, 0.4) 0, rgba(30, 87, 153, 0) 50%);
+}
+
+#cooling-wrapper::after {
+	bottom: 72px;
+	left: 1145px;
+	width: 44px;
+	height: 44px;
+	transform: rotateZ(50deg);
+	background: radial-gradient(at 0 50%, rgba(240, 84, 67, 0.2) 0%, rgba(240, 84, 67, 0) 75%);
+}
+
+@media only screen and (max-width: 979px) {
+	#section-cooling > .section-content {
+		padding-top: 99px !important;
+	}
+
+	#cooling-wrapper, #image-cooling {
+		width: 320px;
+		height: 84px;
+	}
+	
+	#image-cooling {
+		background-image: url(/images/inventor/1.0/images/cooling/cooling-small@2x.png);
+		background-size: 320px 84px;
+	}
+	
+	#cooling-wrapper::before {
+		right: 290px;
+		bottom: 28px;
+		width: 40px;
+		height: 40px;
+		background: radial-gradient(at 100% 50%, rgba(31, 93, 161, 0.4) 0, rgba(30, 87, 153, 0) 50%);
+	}
+	
+	#cooling-wrapper::after {
+		left: 290px;
+		bottom: 18px;
+		width: 11px;
+		height: 11px;
+		transform: rotateZ(50deg);
+		background: radial-gradient(at 0 50%, rgba(240, 84, 67, 0.2) 0%, rgba(240, 84, 67, 0) 75%);
+	}
+}
+
+.js .fade-in #cooling-wrapper::before, .js .fade-in #cooling-wrapper::after {
+	opacity: 0;
+}
+
+.js .fade-in.animated #cooling-wrapper::before, .js .fade-in.animated #cooling-wrapper::after {
+	transition: opacity 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+	opacity: 1;
+}
+
+.js .fade-in.animated #cooling-wrapper::before {
+	transition-delay: 1.6s;
+}
+
+.js .fade-in.animated #cooling-wrapper::after {
+	transition-delay: 2s;
+}
+
+/* Section origin */
+
+#section-origin {
+	background: url(/images/inventor/1.0/images/origin/background.jpg) 50% 0 no-repeat;
+	color: #111;
+}
+
+#section-origin > .section-content {
+	padding-bottom: 0;
+}
+
+#image-origin {
+	margin: 50px auto 0;
+	width: 647px;
+	height: 243px;
+	background: url(/images/inventor/1.0/images/origin/origin-large.png) no-repeat;
+}
+
+@media only screen and (max-width: 979px) {
+	#section-origin > .section-content {
+		padding-bottom: 163px;
+	}
+
+	#image-origin {
+		bottom: 0;
+		width: 300px;
+		height: 113px;
+		background-image: url(/images/inventor/1.0/images/origin/origin-small@2x.png);
+		background-size: 300px 113px;
+	}	
+}

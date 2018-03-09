@@ -1,0 +1,443 @@
+/* Features */
+
+/* Modal */
+
+.modal {
+	position: absolute;
+	z-index: 9999;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #FFF;
+	display: none;
+}
+
+body.noscroll > * {
+	display: none !important;
+}
+
+.modal:target {
+	display: block !important;
+}
+
+.modal-content {
+	height: 100%;
+}
+
+@keyframes magnify {
+	from {
+		transform: scale(0.75);
+		opacity: 0;
+	}
+}
+
+.modal:target .modal-content {
+	animation: magnify 0.5s ease-in-out 0.2s backwards;
+}
+
+.modal-close {
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	width: 15px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 50px;
+	font-weight: 100;
+}
+
+/* Video player */
+
+.video-player {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	width: 960px;
+	height: 540px;
+	background-color: #000;
+}
+
+@media only screen and (max-width: 1023px) {
+	.video-player {
+		width: 640px;
+		height: 360px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.video-player {
+		width: 480px;
+		height: 270px;
+	}
+}
+
+@media only screen and (max-width: 487px) {
+	.video-player {
+		width: 320px;
+		height: 180px;
+	}
+}
+
+
+
+/* Sections */
+
+/* Section poster */
+
+.section-poster {
+	margin-top: 40px;
+}
+
+.section-poster .section-content {
+	padding-top: 0 !important;
+	padding-bottom: 0;
+}
+
+/* Poster image */
+
+.poster-image {
+	margin-left: auto;
+	margin-right: auto;
+	height: 490px;
+	height: 551px;
+}
+
+@media only screen and (max-width: 979px) {
+	.poster-image {
+		height: 245px;
+		height: 51vw;
+	}
+}
+
+.poster-content {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.poster-caption {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 20px;
+	text-align: center;
+	font-size: 1.25em;
+}
+
+@media only screen and (max-width: 979px) {
+	.poster-caption {
+		font-size: 1em;
+	}
+}
+
+/* Section workshops */
+
+#section-workshops .poster-image {
+	background: url(/images/spots/1.0/images/posters/workshops-large.jpg) 50% 0 / cover no-repeat;
+}
+
+#section-workshops .poster-caption {
+	color: #FFF;
+}
+
+/* Section reacting */
+
+#section-reacting .poster-image {
+	background: url(/images/spots/1.0/images/posters/reacting-large.jpg) 50% 0 / cover no-repeat;
+}
+
+#section-reacting .poster-caption {
+	color: #FFF;
+}
+
+/* Section specializations */
+
+#section-specializations .poster-image {
+	background: url(/images/spots/1.0/images/posters/specializations-large.jpg) 50% 0 / cover no-repeat;
+}
+
+#section-specializations .poster-caption {
+	color: #FFF;
+}
+
+/* Section camera */
+
+#column-camera {
+	padding-bottom: 50px;
+}
+
+#section-camera h2 {
+	margin-bottom: 15px;
+}
+
+#section-camera p {
+	font-size: 1.75em;
+	font-weight: 100;
+}
+
+@media only screen and (max-width: 979px) {
+	#section-camera p {
+		margin: auto;
+		width: 89%;
+		text-align: center;
+		max-width: 640px;
+		font-size: 1.25em;
+	}
+}
+
+#image-cameraman {
+	width: 640px;
+	height: 427px;
+	background: url(/images/spots/1.0/images/cameraman/cameraman-large.jpg) no-repeat;
+}
+
+@media only screen and (max-width: 979px) {
+	#image-cameraman {
+		margin: auto;
+		width: 100%;
+		height: 214px;
+		height: 60vw;
+		background-image: url(/images/spots/1.0/images/cameraman/cameraman-small.jpg);
+		background-position: 50%;
+		background-size: contain;
+	}
+}
+
+/* Section budget */
+
+#column-budget {
+	padding-bottom: 30px;
+}
+
+#section-budget h2 {
+	margin-bottom: 15px;
+}
+
+#callout-budget {
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+#callout-budget > .callout-description {
+	color: #666;
+}
+
+#image-dolly {
+	float: right;
+	width: 396px;
+	height: 594px;
+	background: url(/images/spots/1.0/images/dolly/dolly-large.jpg) no-repeat;
+}
+
+@media only screen and (max-width: 979px) {
+	#image-dolly {
+		float: none;
+		margin: auto;
+		width: 100%;
+		height: 297px;
+		height: 135vw;
+		background-image: url(/images/spots/1.0/images/dolly/dolly-small.jpg);
+		background-position: 50%;
+		background-size: contain;
+	}
+}
+
+#callout-budget {
+	color: #000;	
+}
+
+/* Section budget */
+
+#section-budget {
+	padding-top: 20px;
+}
+
+/* Section accident */
+
+#section-accident h2 {
+	margin-bottom: 10px;
+}
+
+#accident-container {
+	position: relative;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	cursor: pointer;
+	transition: opacity 1s;
+}
+
+#accident-container, #image-accident-first, #image-accident-final {
+	width: 980px;
+	height: 551px;
+}
+
+@media only screen and (max-width: 979px) {
+	#accident-container, #image-accident-first, #image-accident-final {
+		width: 100%;
+		height: 51vw;
+	}
+}
+
+.image-accident {
+	position: absolute;
+	background-repeat: no-repeat;
+	opacity: 0;
+}
+
+.js .fade-in.animated .image-accident {
+	transition: opacity cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	opacity: 1;
+}
+
+#image-accident-first {
+	background-image: url(/images/spots/1.0/images/fx/first-large.jpg);
+	opacity: 1;
+}
+
+@media only screen and (max-width: 979px) {
+	#image-accident-first {
+		background-image: url(/images/spots/1.0/images/fx/first-small@2x.jpg);
+		background-size: contain;
+	}
+}
+
+#image-accident-second {
+	width: 150%;
+	height: 150%;
+	background-image: url(/images/spots/1.0/images/fx/second-large.jpg);
+	transform: scale(0.6667) translate3d(-24.966%, -25.0302%, 0);
+}
+
+.js .fade-in.animated #image-accident-second {
+	transform: scale(1) translate3d(-17.2789%, -29.3833%, 0);
+	transition-property: opacity, transform;
+	transition-delay: 1s, 1.6s;
+	transition-duration: 0.6s, 0.8s;
+}
+
+@media only screen and (max-width: 979px) {
+	#image-accident-second {
+		background-image: url(/images/spots/1.0/images/fx/second-small@2x.jpg);
+		background-size: contain;
+	}
+}
+
+#image-accident-overlay {
+	right: 12.6531%;
+	bottom: 9.4374%;
+	width: 45.5102%;
+	height: 26.8603%;
+	background-image: url(/images/spots/1.0/images/fx/overlay-large.png);
+}
+
+.js .fade-in.animated #image-accident-overlay {
+	transition-duration: 0.4s;
+	transition-delay: 2.6s;
+}
+
+@media only screen and (max-width: 979px) {
+	#image-accident-overlay {
+		background-image: url(/images/spots/1.0/images/fx/overlay-small@2x.png);
+		background-size: contain;
+	}
+}
+
+#image-accident-final {
+	background-image: url(/images/spots/1.0/images/fx/final-large.jpg);
+}
+
+.js .fade-in.animated #image-accident-final {
+	transition-duration: 0.2s;
+	transition-delay: 3.6s;
+}
+
+@media only screen and (max-width: 979px) {
+	#image-accident-final {
+		background-image: url(/images/spots/1.0/images/fx/final-small@2x.jpg);
+		background-size: contain;
+	}
+}
+
+#accident-replay {
+	position: relative;
+	line-height: 551px;
+	font-size: 2em;
+	font-weight: 100;
+	color: #FFF;
+	opacity: 0;
+}
+
+.js .fade-in.animated #accident-replay {
+	opacity: 1;
+	transition: opacity 0.1s ease 4s;
+}
+
+@media only screen and (max-width: 979px) {
+	#accident-replay {
+		line-height: 180px;
+		line-height: 51vw;
+	}
+}
+
+/* Section future */
+
+#section-future {
+	background: linear-gradient(to bottom, #FFF 0%, #888 100%);
+}
+
+#section-future > .section-content {
+	padding-bottom: 0;
+}
+
+#image-clapperboard {
+	margin: 10px auto 0;
+	width: 640px;
+	height: 427px;
+	background: url(/images/spots/1.0/images/clapperboard/clapperboard-large.png) no-repeat;
+}
+
+#image-clapperboard > figcaption {
+	padding-top: 334px;
+	text-transform: uppercase;
+	color: #FFF;
+}
+
+#image-clapperboard h3 {
+	font-size: 2.25em;
+}
+
+@media only screen and (max-width: 979px) {
+	#image-clapperboard > figcaption {
+		padding-top: 167px;
+	}
+
+	#image-clapperboard {
+		width: 320px;
+		height: 214px;
+		background-size: 320px 213px;
+	}
+	#image-clapperboard h3 {
+		font-size: 1.125em;
+	}
+}
+
+@media only screen and (max-width: 379px) {
+	#image-clapperboard > figcaption {
+		padding-top: 84px;
+	}
+
+	#image-clapperboard {
+		width: 160px;
+		height: 107px;
+		background-image: url(/images/spots/1.0/images/clapperboard/clapperboard-xsmall@2x.png);
+		background-size: 160px 107px;
+	}
+	#image-clapperboard h3 {
+		font-size: 0.5625em;
+	}
+}
