@@ -21,8 +21,6 @@ updateFadeIns();
 
 /* Parallaxes */
 
-updateParallaxes();
-
 window.addEventListener('scroll', function() {	
 	/* Fade in */
 	updateFadeIns();
