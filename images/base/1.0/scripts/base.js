@@ -54,7 +54,7 @@ function updateFadeIns() {
 
 /* Parallax */
 
-/*var parallaxes = [].slice.call(document.getElementsByClassName('parallax-background'));
+var parallaxes = [].slice.call(document.getElementsByClassName('parallax-background'));
 function updateParallaxes() {
 	parallaxes.forEach(function(element) {
 		var rect = element.getBoundingClientRect();
@@ -62,7 +62,7 @@ function updateParallaxes() {
 		var incl = Math.min(Math.max((height - rect.top) / (height + rect.height), 0), 1);
 		element.style.backgroundPosition = '50% ' + incl * 100 + '%';
 	});
-}*/
+}
 
 /* Fragilie vibration on link click */
 for(anchors = document.getElementsByTagName('a'), i = 0; i < anchors.length; i++) {
